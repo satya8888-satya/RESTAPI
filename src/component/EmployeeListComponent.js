@@ -6,7 +6,7 @@ const ListEmployeeComponent = () => {
   var EmployeeArray=()=>{
     let arr=[];
   }
-  var [EmployeeArray,setEmployee]=useState([]);
+  var [employeeArray,setEmployee]=useState([]);
   
   useEffect(()=>{
     getAllEmployee();
@@ -14,7 +14,7 @@ const ListEmployeeComponent = () => {
 
   function getAllEmployee(){
     EmployeeService.getAllEmployees()
-    .then(res=>{setEmployeeArray(res.data);console.log("The Results Fetched SuccessFully ")})
+    .then(res=>{setemployeeArray(res.data);console.log("The Results Fetched SuccessFully ")})
     .catch(e=>console.log("Error"));
   }
   return (
